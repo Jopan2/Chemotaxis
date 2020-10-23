@@ -1,4 +1,4 @@
- Bacteria[] bob;
+Bacteria[] bob;
 void setup() {
   size(500,500);
   bob = new Bacteria[10];
@@ -23,8 +23,8 @@ void draw() {
 class Bacteria {
    int myX, myY, myCol;
    Bacteria() {
-     myX = (int)(Math.random()200+125);
-     myY = (int)(Math.random()200+125);
+     myX = (int)(Math.random()*200+125);
+     myY = (int)(Math.random()*200+125);
      myCol = 200;
   }
   void walk() {
@@ -37,13 +37,13 @@ class Bacteria {
     else if(myY > 425)
       myY -= 10;
     if(mouseX > myX)
-      myX = myX + (int)(Math.random()5)-1;
+      myX = myX + (int)(Math.random()*5)-1;
     else
-      myX = myX + (int)(Math.random()5)-3;
+      myX = myX + (int)(Math.random()*5)-3;
     if(mouseY > myY)
-      myY = myY + (int)(Math.random()5)-1;
+      myY = myY + (int)(Math.random()*5)-1;
     else
-      myY = myY + (int)(Math.random()5)-3;
+      myY = myY + (int)(Math.random()*5)-3;
   }
   void show()
   {
